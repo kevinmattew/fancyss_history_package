@@ -52,4 +52,7 @@ PS: mipsel机型的固件下载地址: [http://koolshare.cn/forum-96-1.html](htt
 
 #### 相关链接：
 * koolshare OpenWRT/LEDE X64机型的科学上网离线包：[https://github.com/hq450/fancyss_history_package/tree/master/fancyss_X64](https://github.com/hq450/fancyss_history_package/tree/master/fancyss_X64)
-
+#### 
+检测到离线安装包 含非法关键词解决方法
+提示： 如果提示检测到离线安装包名有非法关键词，开启路由器的SSH功能，登录并输入以下命令后，再进行离线安装。(arm380/X7.x版本固件需要请将软件中心更新到1.4.8及以上)
+sed -i 's/\tdetect_package/\t# detect_package/g' /koolshare/scripts/ks_tar_install.sh
